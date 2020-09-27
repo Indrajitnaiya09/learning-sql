@@ -70,3 +70,8 @@ Exercise 16 — Tasks
             VERSION FLOAT,
             DOWNLOAD_COUNT INTEGER
         );
+
+Exercise 17 — Tasks
+    Add a column named Aspect_ratio with a FLOAT data type to store the aspect-ratio each movie was released in.
+        ALTER TABLE MOVIES
+        ADD COLUMN Aspect_ratio FLOAT;
