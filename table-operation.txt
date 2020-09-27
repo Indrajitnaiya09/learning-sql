@@ -1,4 +1,24 @@
 Exercise 13 — Tasks
+
+DATA SET
+Table: Movies
+Id	Title	Director	Year	Length_minutes
+1	Toy Story	John Lasseter	1995	81
+2	A Bug's Life	John Lasseter	1998	95
+3	Toy Story 2	John Lasseter	1999	93
+4	Monsters, Inc.	Pete Docter	2001	92
+5	Finding Nemo	Andrew Stanton	2003	107
+6	The Incredibles	Brad Bird	2004	116
+7	Cars	John Lasseter	2006	117
+8	Ratatouille	Brad Bird	2007	115
+9	WALL-E	Andrew Stanton	2008	104
+10	Up	Pete Docter	2009	101
+11	Toy Story 3	Lee Unkrich	2010	103
+12	Cars 2	John Lasseter	2011	120
+13	Brave	Brenda Chapman	2012	102
+14	Monsters University	Dan Scanlon	2013	110
+
+
     Add the studio's new production, Toy Story 4 to the list of movies (you can use any director)
         INSERT INTO MOVIES
             (ID, TITLE, DIRECTOR, YEAR, LENGTH_MINUTES)
@@ -8,6 +28,8 @@ Exercise 13 — Tasks
         INSERT INTO BOXOFFICE
             (MOVIE_ID, RATING, DOMESTIC_SALES, INTERNATIONAL_SALES)
             VALUES(4,7.9, 340*1000000, 270*1000000)
+
+Exercise 14 — Tasks
 
     The director for A Bug's Life is incorrect, it was actually directed by John Lasseter
         UPDATE MOVIES
@@ -24,3 +46,13 @@ Exercise 13 — Tasks
         SET TITLE = "Toy Story 3",
             DIRECTOR = "Lee Unkrich"
         WHERE ID = 11;
+
+Exercise 15 — Tasks
+
+    This database is getting too big, lets remove all movies that were released before 2005
+        DELETE FROM movies
+        WHERE YEAR < 2005;
+
+    Andrew Stanton has also left the studio, so please remove all movies directed by him.
+        DELETE FROM movies
+        WHERE DIRECTOR = "Andrew Stanton";
